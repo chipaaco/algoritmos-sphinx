@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estructuras de Control &mdash; documentación de Algoritmos y Estructuras de Datos - 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4936afed"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Subacciones (Funciones y Procedimientos)" href="subacciones.html" />
+    <link rel="prev" title="Introducción a la Algoritmia" href="introduccion_algoritmia.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algoritmos y Estructuras de Datos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduccion_algoritmia.html">Introducción a la Algoritmia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#que-es-un-algoritmo">Qué es un Algoritmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#caracteristicas-de-los-algoritmos">Características de los Algoritmos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#entrada-proceso-y-salida">Entrada, Proceso y Salida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#tipos-de-datos">Tipos de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#numericos">Numéricos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#alfanumericos">Alfanuméricos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#logicos-booleanos">Lógicos (Booleanos)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#estructuras-de-datos-simples">Estructuras de Datos Simples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#constantes">Constantes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#operadores-y-operandos">Operadores y Operandos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-de-asignacion">Operadores de Asignación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-aritmeticos">Operadores Aritméticos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-relacionales">Operadores Relacionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-logicos">Operadores Lógicos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#prioridad-de-los-operadores-general">Prioridad de los Operadores (General)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#prueba-de-escritorio">Prueba de Escritorio</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Estructuras de Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#estructura-secuencial">Estructura Secuencial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estructura-condicional">Estructura Condicional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#condicional-alternativo-simple-si">Condicional Alternativo Simple (SI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#condicional-alternativo-doble-si-sino">Condicional Alternativo Doble (SI-SINO)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#condicional-alternativo-multiple-segun">Condicional Alternativo Múltiple (SEGÚN)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estructuras-repetitivas-bucles">Estructuras Repetitivas (Bucles)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#estructura-pre-test-mientras">Estructura PRE-TEST (MIENTRAS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#estructura-post-test-repetir">Estructura POST-TEST (REPETIR)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#estructura-manejada-por-contador-para">Estructura Manejada por Contador (PARA)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#comparacion-entre-estructuras-repetitivas">Comparación entre Estructuras Repetitivas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="subacciones.html">Subacciones (Funciones y Procedimientos)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#caracteristicas">Características</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#control-de-ejecucion">Control de Ejecución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#elementos-de-las-subacciones">Elementos de las Subacciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#funciones">Funciones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subacciones.html#declaracion-de-funciones-pseudocodigo">Declaración de Funciones (Pseudocódigo)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#procedimientos">Procedimientos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subacciones.html#declaracion-de-procedimientos-pseudocodigo">Declaración de Procedimientos (Pseudocódigo)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#ambitos-de-variables">Ámbitos de Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#paso-de-parametros">Paso de Parámetros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subacciones.html#paso-de-parametros-por-valor">Paso de Parámetros por Valor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="estructuras_datos_complejas.html">Estructuras de Datos Complejas (Campo, Registro, Archivo)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#concepto-de-campo">Concepto de Campo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#registro">Registro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#archivos">Archivos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_datos_complejas.html#caracteristicas-generales-de-los-archivos">Características Generales de los Archivos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_datos_complejas.html#consistencia-y-congruencia-de-archivos">Consistencia y Congruencia de Archivos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_datos_complejas.html#clasificacion-de-archivos-por-su-contenido">Clasificación de Archivos por su Contenido</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#organizacion-de-archivos">Organización de Archivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#acceso-de-archivos">Acceso de Archivos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nocion_secuencia.html">Noción de Secuencia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#concepto">Concepto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#clasificacion">Clasificación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#segun-su-contenido">Según su contenido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#segun-su-procesamiento">Según su procesamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#uso-en-el-algoritmo">Uso en el Algoritmo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#definicion-en-el-ambiente">Definición en el ambiente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#acciones-en-el-procesamiento-operadores-de-secuencia">Acciones en el procesamiento (Operadores de Secuencia)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#sub-secuencias">Sub-Secuencias</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#relacion-entre-sub-secuencias">Relación entre Sub-Secuencias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algoritmos y Estructuras de Datos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Estructuras de Control</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/estructuras_control.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="estructuras-de-control">
+<h1>Estructuras de Control<a class="headerlink" href="#estructuras-de-control" title="Link to this heading"></a></h1>
+<p>Las estructuras de control señalan el orden en que tienen que sucederse los pasos de un algoritmo.
+Todo algoritmo estructurado puede ser escrito utilizando solamente tres tipos de estructura de control.</p>
+<section id="estructura-secuencial">
+<h2>Estructura Secuencial<a class="headerlink" href="#estructura-secuencial" title="Link to this heading"></a></h2>
+<p>Una acción (instrucción) sigue a otra en secuencia. La salida de una es la entrada de la siguiente.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ACCION Ejemplo1 ES
+AMBIENTE
+    a, doble: entero
+PROCESO
+    ESCRIBIR(&quot;Ingrese el número&quot;)
+    LEER(a)
+    doble := a * 2
+    ESCRIBIR(&quot;Resultado -&gt;&quot;, doble)
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="estructura-condicional">
+<h2>Estructura Condicional<a class="headerlink" href="#estructura-condicional" title="Link to this heading"></a></h2>
+<p>Se utilizan para tomar decisiones lógicas.</p>
+<section id="condicional-alternativo-simple-si">
+<h3>Condicional Alternativo Simple (SI)<a class="headerlink" href="#condicional-alternativo-simple-si" title="Link to this heading"></a></h3>
+<p>Si se verifica una condición, se ejecuta una serie de instrucciones.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SI &lt;condición&gt; ENTONCES
+    &lt;acciones_si_verdadero&gt;
+FIN_SI
+
+// Ejemplo
+ACCION Ejemplo2 ES
+AMBIENTE
+    a: entero
+PROCESO
+    ESC(&quot;Ingrese el número&quot;)
+    LEER(a)
+    SI a &gt; 0 ENTONCES
+        ESCRIBIR(&quot;El nro. es positivo&quot;)
+    FIN_SI
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="condicional-alternativo-doble-si-sino">
+<h3>Condicional Alternativo Doble (SI-SINO)<a class="headerlink" href="#condicional-alternativo-doble-si-sino" title="Link to this heading"></a></h3>
+<p>Si se verifica una condición, se ejecuta un bloque; si no, se ejecuta otro.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SI &lt;condición&gt; ENTONCES
+    &lt;acciones_si_verdadero&gt;
+SINO
+    &lt;acciones_si_falso&gt;
+FIN_SI
+
+// Ejemplo
+ACCION Ejemplo3 ES
+AMBIENTE
+    A, B: ENTERO
+PROCESO
+    ESC(&quot;Ingrese el primer número&quot;), LEER(A)
+    ESC(&quot;Ingrese el segundo número&quot;), LEER(B)
+    SI A &gt; B ENTONCES
+        ESC(A, &quot;es mayor que &quot;, B)
+    SINO
+        ESC(A, &quot;NO es mayor que &quot;, B)
+    FIN_SI
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="condicional-alternativo-multiple-segun">
+<h3>Condicional Alternativo Múltiple (SEGÚN)<a class="headerlink" href="#condicional-alternativo-multiple-segun" title="Link to this heading"></a></h3>
+<p>Permite evaluar una variable que puede tomar múltiples valores y ejecutar diferentes acciones para cada uno.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SEGÚN &lt;variable_o_expresion&gt; HACER
+    &lt;valor1&gt;: &lt;acciones_para_valor1&gt;
+    &lt;valor2&gt;: &lt;acciones_para_valor2&gt;
+    ...
+    &lt;otro_caso&gt;: &lt;acciones_por_defecto&gt; // Opcional
+FIN_SEGUN
+
+// Ejemplo
+ACCION EJEMPLO4 ES
+AMBIENTE
+    a, b, suma: entero
+PROCESO
+    ESC(&quot;Ingrese el primer número&quot;), LEER(a)
+    ESC (&quot;Ingrese el segundo número&quot;),LEER(b)
+    suma := a + b
+    SEGÚN suma HACER
+        =0 : ESC(&quot;El resultado es igual a 0&quot;)
+        &lt;0: ESC(&quot;El resultado es menor a 0&quot;)
+        &gt;0: ESC(&quot;El resultado es mayor a 0&quot;)
+    FIN_SEGUN
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+</section>
+<section id="estructuras-repetitivas-bucles">
+<h2>Estructuras Repetitivas (Bucles)<a class="headerlink" href="#estructuras-repetitivas-bucles" title="Link to this heading"></a></h2>
+<p>Repiten una secuencia de instrucciones un número determinado o indeterminado de veces.
+Cada repetición se llama <strong>iteración</strong>.</p>
+<section id="estructura-pre-test-mientras">
+<h3>Estructura PRE-TEST (MIENTRAS)<a class="headerlink" href="#estructura-pre-test-mientras" title="Link to this heading"></a></h3>
+<p>El cuerpo del bucle se repite <strong>mientras</strong> una condición sea verdadera.
+La condición se evalúa <strong>antes</strong> de cada iteración. Puede ejecutarse 0 o más veces.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>MIENTRAS &lt;condición&gt; HACER
+    &lt;acciones_del_bucle&gt;
+FIN_MIENTRAS
+
+// Ejemplo: Suma de números entre 1 y N
+ACCION BUCLE1_MIENTRAS ES
+AMBIENTE
+    n, suma, cont: entero
+PROCESO
+    ESCRIBIR(&quot;Ingrese el numero&quot;), LEER(n)
+    suma := 0
+    cont := 1
+    MIENTRAS cont &lt;= n HACER
+        suma := suma + cont
+        cont := cont + 1
+    FIN_MIENTRAS
+    ESCRIBIR(&quot;La suma es: &quot;, suma)
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="estructura-post-test-repetir">
+<h3>Estructura POST-TEST (REPETIR)<a class="headerlink" href="#estructura-post-test-repetir" title="Link to this heading"></a></h3>
+<p>El cuerpo del bucle se ejecuta <strong>al menos una vez</strong>, y se repite <strong>hasta que</strong> una condición sea verdadera.
+La condición se evalúa <strong>después</strong> de cada iteración.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>REPETIR
+    &lt;acciones_del_bucle&gt;
+HASTA QUE &lt;condición&gt;
+
+// Ejemplo: Suma de números entre 1 y N
+ACCION BUCLE1_REPETIR ES
+AMBIENTE
+    n, suma, cont: entero
+PROCESO
+    ESCRIBIR(&quot;Ingrese el numero&quot;), LEER(n)
+    suma := 0
+    cont := 0 // o 1, ajustar lógica interna
+    REPETIR
+        cont := cont + 1 // Si cont inicia en 0
+        suma := suma + cont
+        // Si cont iniciara en 1, el orden podría ser suma, luego cont++
+    HASTA QUE cont &gt;= n // o suma &gt;= n en el ejemplo original (que parece un error de lógica para sumar 1 a N)
+                        // Para sumar de 1 a N, la condición de parada es sobre &#39;cont&#39;
+    ESCRIBIR(&quot;La suma es: &quot;, suma)
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="estructura-manejada-por-contador-para">
+<h3>Estructura Manejada por Contador (PARA)<a class="headerlink" href="#estructura-manejada-por-contador-para" title="Link to this heading"></a></h3>
+<p>Es un ciclo definido, se conoce de antemano la cantidad de veces que se iterará.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>PARA &lt;variable_contador&gt; := &lt;valor_inicial&gt; HASTA &lt;valor_final&gt; [INCREMENTO &lt;paso&gt;] HACER
+    &lt;acciones_del_bucle&gt;
+FIN_PARA
+
+// Ejemplo: Suma de números entre 1 y N
+ACCION BUCLE3_PARA ES
+AMBIENTE
+    n, suma, cont: entero
+PROCESO
+    ESCRIBIR(&quot;Ingrese el numero&quot;), LEER(n)
+    suma := 0
+    PARA cont := 1 HASTA n HACER  // Incremento por defecto es 1
+        suma := suma + cont
+    FIN_PARA
+    ESCRIBIR(&quot;La suma es: &quot;, suma)
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+</section>
+<section id="comparacion-entre-estructuras-repetitivas">
+<h2>Comparación entre Estructuras Repetitivas<a class="headerlink" href="#comparacion-entre-estructuras-repetitivas" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Característica</p></th>
+<th class="head"><p>PRE-TEST (MIENTRAS)</p></th>
+<th class="head"><p>POST-TEST (REPETIR)</p></th>
+<th class="head"><p>MANEJADO X CONT (PARA)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>¿Se conoce N° iteraciones?</p></td>
+<td><p>NO</p></td>
+<td><p>NO</p></td>
+<td><p>SI</p></td>
+</tr>
+<tr class="row-odd"><td><p>Momento verificación condición</p></td>
+<td><p>Antes de ejecutar cuerpo</p></td>
+<td><p>Después de ejecutar cuerpo</p></td>
+<td><p>Antes de ejecutar cuerpo</p></td>
+</tr>
+<tr class="row-even"><td><p>¿Puede no ejecutarse nunca?</p></td>
+<td><p>SI (si condición es falsa al inicio)</p></td>
+<td><p>NO (al menos una vez)</p></td>
+<td><p>SI (si Vi &gt; Vf y paso &gt; 0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>¿Modificar valor condición en bucle?</p></td>
+<td><p>SI (necesario para finalizar)</p></td>
+<td><p>SI (necesario para finalizar)</p></td>
+<td><p>NO (es automático)</p></td>
+</tr>
+<tr class="row-even"><td><p>¿Puede ser infinito?</p></td>
+<td><p>SI</p></td>
+<td><p>SI</p></td>
+<td><p>NO (generalmente)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuándo usar</p></td>
+<td><p>N° iteraciones indeterminado,
+puede no ejecutarse</p></td>
+<td><p>N° iteraciones indeterminado,
+debe ejecutarse al menos una vez</p></td>
+<td><p>N° iteraciones conocido
+por adelantado</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="introduccion_algoritmia.html" class="btn btn-neutral float-left" title="Introducción a la Algoritmia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="subacciones.html" class="btn btn-neutral float-right" title="Subacciones (Funciones y Procedimientos)" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Docentes de la Cátedra AED - UTN FRRe.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

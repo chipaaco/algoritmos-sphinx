@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subacciones (Funciones y Procedimientos) &mdash; documentación de Algoritmos y Estructuras de Datos - 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4936afed"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Estructuras de Datos Complejas (Campo, Registro, Archivo)" href="estructuras_datos_complejas.html" />
+    <link rel="prev" title="Estructuras de Control" href="estructuras_control.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algoritmos y Estructuras de Datos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduccion_algoritmia.html">Introducción a la Algoritmia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#que-es-un-algoritmo">Qué es un Algoritmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#caracteristicas-de-los-algoritmos">Características de los Algoritmos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#entrada-proceso-y-salida">Entrada, Proceso y Salida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#tipos-de-datos">Tipos de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#numericos">Numéricos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#alfanumericos">Alfanuméricos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#logicos-booleanos">Lógicos (Booleanos)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#estructuras-de-datos-simples">Estructuras de Datos Simples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#constantes">Constantes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#operadores-y-operandos">Operadores y Operandos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-de-asignacion">Operadores de Asignación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-aritmeticos">Operadores Aritméticos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-relacionales">Operadores Relacionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-logicos">Operadores Lógicos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#prioridad-de-los-operadores-general">Prioridad de los Operadores (General)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#prueba-de-escritorio">Prueba de Escritorio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="estructuras_control.html">Estructuras de Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_control.html#estructura-secuencial">Estructura Secuencial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_control.html#estructura-condicional">Estructura Condicional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#condicional-alternativo-simple-si">Condicional Alternativo Simple (SI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#condicional-alternativo-doble-si-sino">Condicional Alternativo Doble (SI-SINO)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#condicional-alternativo-multiple-segun">Condicional Alternativo Múltiple (SEGÚN)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_control.html#estructuras-repetitivas-bucles">Estructuras Repetitivas (Bucles)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#estructura-pre-test-mientras">Estructura PRE-TEST (MIENTRAS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#estructura-post-test-repetir">Estructura POST-TEST (REPETIR)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#estructura-manejada-por-contador-para">Estructura Manejada por Contador (PARA)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_control.html#comparacion-entre-estructuras-repetitivas">Comparación entre Estructuras Repetitivas</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Subacciones (Funciones y Procedimientos)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#caracteristicas">Características</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control-de-ejecucion">Control de Ejecución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#elementos-de-las-subacciones">Elementos de las Subacciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funciones">Funciones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#declaracion-de-funciones-pseudocodigo">Declaración de Funciones (Pseudocódigo)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#procedimientos">Procedimientos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#declaracion-de-procedimientos-pseudocodigo">Declaración de Procedimientos (Pseudocódigo)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ambitos-de-variables">Ámbitos de Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#paso-de-parametros">Paso de Parámetros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#paso-de-parametros-por-valor">Paso de Parámetros por Valor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="estructuras_datos_complejas.html">Estructuras de Datos Complejas (Campo, Registro, Archivo)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#concepto-de-campo">Concepto de Campo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#registro">Registro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#archivos">Archivos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_datos_complejas.html#caracteristicas-generales-de-los-archivos">Características Generales de los Archivos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_datos_complejas.html#consistencia-y-congruencia-de-archivos">Consistencia y Congruencia de Archivos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_datos_complejas.html#clasificacion-de-archivos-por-su-contenido">Clasificación de Archivos por su Contenido</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#organizacion-de-archivos">Organización de Archivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_datos_complejas.html#acceso-de-archivos">Acceso de Archivos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nocion_secuencia.html">Noción de Secuencia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#concepto">Concepto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#clasificacion">Clasificación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#segun-su-contenido">Según su contenido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#segun-su-procesamiento">Según su procesamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#uso-en-el-algoritmo">Uso en el Algoritmo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#definicion-en-el-ambiente">Definición en el ambiente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#acciones-en-el-procesamiento-operadores-de-secuencia">Acciones en el procesamiento (Operadores de Secuencia)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#sub-secuencias">Sub-Secuencias</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#relacion-entre-sub-secuencias">Relación entre Sub-Secuencias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algoritmos y Estructuras de Datos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Subacciones (Funciones y Procedimientos)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/subacciones.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="subacciones-funciones-y-procedimientos">
+<h1>Subacciones (Funciones y Procedimientos)<a class="headerlink" href="#subacciones-funciones-y-procedimientos" title="Link to this heading"></a></h1>
+<p>La resolución de problemas complejos se facilita dividiéndolos en problemas más pequeños,
+cuya resolución se realiza mediante subalgoritmos o subacciones.</p>
+<section id="caracteristicas">
+<h2>Características<a class="headerlink" href="#caracteristicas" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Son acciones que forman parte de una ACCIÓN PRINCIPAL.</p></li>
+<li><p>Módulos escritos para ejecutar alguna tarea específica.</p></li>
+<li><p>Se definen en el AMBIENTE y se invocan en el PROCESO.</p></li>
+<li><p>Se escriben una vez, pero pueden ser referenciados múltiples veces.</p></li>
+</ul>
+</section>
+<section id="control-de-ejecucion">
+<h2>Control de Ejecución<a class="headerlink" href="#control-de-ejecucion" title="Link to this heading"></a></h2>
+<p>Cuando el algoritmo principal realiza la solicitud a una subacción, se detiene hasta que
+la subacción termina su tarea, y luego continúa.</p>
+</section>
+<section id="elementos-de-las-subacciones">
+<h2>Elementos de las Subacciones<a class="headerlink" href="#elementos-de-las-subacciones" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Nombre</strong>: Único y representativo. No debe ser palabra reservada.</p></li>
+<li><p><strong>Parámetros</strong>: Variables y/o constantes para pasar datos entre el algoritmo principal y la subacción.
+*   <strong>Parámetros formales (o ficticios)</strong>: Los que aparecen en la definición de la subacción. <em>Solo pueden ser variables</em>.
+*   <strong>Parámetros actuales (o argumentos)</strong>: Los que se usan en la llamada a la subacción. <em>Pueden ser constantes, variables, expresiones</em>.</p></li>
+</ul>
+</section>
+<section id="funciones">
+<h2>Funciones<a class="headerlink" href="#funciones" title="Link to this heading"></a></h2>
+<p>Una FUNCIÓN es un subalgoritmo que recibe argumentos (parámetros actuales) y <strong>devuelve un único resultado</strong>.</p>
+<ul class="simple">
+<li><p><strong>Funciones Internas (o intrínsecas predefinidas)</strong>: Incorporadas al sistema/lenguaje.</p></li>
+<li><p><strong>Funciones Externas</strong>: Definidas por el usuario.</p></li>
+</ul>
+<section id="declaracion-de-funciones-pseudocodigo">
+<h3>Declaración de Funciones (Pseudocódigo)<a class="headerlink" href="#declaracion-de-funciones-pseudocodigo" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Funcion &lt;nombrefun&gt;(&lt;lista_de_parámetros_formales&gt;): &lt;Tipo_de_retorno&gt;
+    // Ambiente local de la función (variables locales si son necesarias)
+    &lt;declaraciones_locales&gt;
+PROCESO // Acciones de la función
+    &lt;acciones&gt;
+    &lt;nombrefun&gt; := &lt;valor_de_la_funcion&gt; // Asignación del resultado
+Fin Funcion
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><cite>&lt;nombrefun&gt;</cite>: Nombre de la función.</p></li>
+<li><p><cite>&lt;lista_de_parámetros_formales&gt;</cite>: Lista de parámetros formales. <em>No puede ser vacía</em>.</p></li>
+<li><p><cite>&lt;Tipo_de_retorno&gt;</cite>: Tipo del resultado que devuelve la función.</p></li>
+</ul>
+<p>Ejemplo de Función:
+.. code-block:: text</p>
+<blockquote>
+<div><p>FUNCION ES_PRIMO(A:entero):lógico
+AMBIENTE</p>
+<blockquote>
+<div><p>i: entero</p>
+</div></blockquote>
+<dl>
+<dt>PROCESO</dt><dd><p>ES_PRIMO := V // Habilito la función como bandera (asumo que es primo)
+PARA i:=2 HASTA (A-1) HACER // Podría optimizarse hasta raiz(A)</p>
+<blockquote>
+<div><dl class="simple">
+<dt>SI A MOD i = 0 ENTONCES</dt><dd><p>ES_PRIMO := F // Ya no es primo
+// Se podría agregar SALIR_PARA para optimizar</p>
+</dd>
+</dl>
+<p>FIN_SI</p>
+</div></blockquote>
+<p>FIN_PARA
+// Considerar caso A &lt; 2, no es primo. El bucle PARA no se ejecuta.
+// Si A es 2 o 3, el bucle PARA no se ejecuta, ES_PRIMO queda en V (correcto).</p>
+</dd>
+</dl>
+<p>FIN_FUNCION</p>
+</div></blockquote>
+</section>
+</section>
+<section id="procedimientos">
+<h2>Procedimientos<a class="headerlink" href="#procedimientos" title="Link to this heading"></a></h2>
+<p>Un PROCEDIMIENTO también es una subacción, diseñado con un fin específico, pero a diferencia
+de las funciones, <strong>no devuelve ningún valor directamente</strong>, solo ejecuta acciones.</p>
+<section id="declaracion-de-procedimientos-pseudocodigo">
+<h3>Declaración de Procedimientos (Pseudocódigo)<a class="headerlink" href="#declaracion-de-procedimientos-pseudocodigo" title="Link to this heading"></a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Procedimiento &lt;nombreproc&gt;(&lt;lista_de_parámetros_formales&gt;)
+    // Ambiente local del procedimiento
+    &lt;declaraciones_locales&gt;
+PROCESO // Acciones del procedimiento
+    &lt;acciones&gt;
+Fin Procedimiento
+</pre></div>
+</div>
+<p>Ejemplo de Procedimiento:
+.. code-block:: text</p>
+<blockquote>
+<div><p>PROCEDIMIENTO Login(usu, pass, valid: alfanumerico) // Asumiendo que valid es la contraseña correcta
+PROCESO</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Si pass = valid entonces</dt><dd><p>ESC(“Acceso autorizado a “, usu)</p>
+</dd>
+<dt>Sino</dt><dd><p>Esc(“Login inválido para “, usu)</p>
+</dd>
+</dl>
+<p>FinSi</p>
+</div></blockquote>
+<p>FIN_PROCEDIMIENTO</p>
+</div></blockquote>
+</section>
+</section>
+<section id="ambitos-de-variables">
+<h2>Ámbitos de Variables<a class="headerlink" href="#ambitos-de-variables" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Variables Locales</strong>: Declaradas dentro de una subacción. Conocidas solo dentro de esa subacción.
+Los parámetros de una subacción también son variables locales.</p></li>
+<li><p><strong>Variables Globales</strong>: Declaradas en el algoritmo principal. Pueden ser utilizadas en el algoritmo
+principal y en todas las subacciones declaradas en él.</p></li>
+</ul>
+</section>
+<section id="paso-de-parametros">
+<h2>Paso de Parámetros<a class="headerlink" href="#paso-de-parametros" title="Link to this heading"></a></h2>
+<p>Proceso por el cual el algoritmo principal envía variables a una subacción.</p>
+<section id="paso-de-parametros-por-valor">
+<h3>Paso de Parámetros por Valor<a class="headerlink" href="#paso-de-parametros-por-valor" title="Link to this heading"></a></h3>
+<p>Se pasa una <strong>copia</strong> del valor del parámetro actual al parámetro formal.
+La subacción trabaja con esta copia. Cualquier modificación al parámetro dentro de la subacción
+<strong>no afecta</strong> a la variable original en el algoritmo llamador.
+Es el método predominante en los ejemplos de la cátedra.</p>
+<a class="reference internal image-reference" href="_static/paso_por_valor.png"><img alt="Esquema de paso de parámetros por valor" class="align-center" src="_static/paso_por_valor.png" style="width: 400px;" />
+</a>
+<p><em>(Nota: Deberás crear o encontrar una imagen llamada `paso_por_valor.png` y colocarla en `docs/source/_static/` para que la directiva `.. image::` funcione. La imagen del PDF es un buen candidato).</em></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="estructuras_control.html" class="btn btn-neutral float-left" title="Estructuras de Control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="estructuras_datos_complejas.html" class="btn btn-neutral float-right" title="Estructuras de Datos Complejas (Campo, Registro, Archivo)" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Docentes de la Cátedra AED - UTN FRRe.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

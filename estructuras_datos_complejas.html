@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estructuras de Datos Complejas (Campo, Registro, Archivo) &mdash; documentación de Algoritmos y Estructuras de Datos - 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4936afed"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Noción de Secuencia" href="nocion_secuencia.html" />
+    <link rel="prev" title="Subacciones (Funciones y Procedimientos)" href="subacciones.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algoritmos y Estructuras de Datos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduccion_algoritmia.html">Introducción a la Algoritmia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#que-es-un-algoritmo">Qué es un Algoritmo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#caracteristicas-de-los-algoritmos">Características de los Algoritmos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#entrada-proceso-y-salida">Entrada, Proceso y Salida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#tipos-de-datos">Tipos de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#numericos">Numéricos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#alfanumericos">Alfanuméricos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#logicos-booleanos">Lógicos (Booleanos)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#estructuras-de-datos-simples">Estructuras de Datos Simples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#constantes">Constantes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#operadores-y-operandos">Operadores y Operandos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-de-asignacion">Operadores de Asignación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-aritmeticos">Operadores Aritméticos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-relacionales">Operadores Relacionales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduccion_algoritmia.html#operadores-logicos">Operadores Lógicos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#prioridad-de-los-operadores-general">Prioridad de los Operadores (General)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion_algoritmia.html#prueba-de-escritorio">Prueba de Escritorio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="estructuras_control.html">Estructuras de Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_control.html#estructura-secuencial">Estructura Secuencial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_control.html#estructura-condicional">Estructura Condicional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#condicional-alternativo-simple-si">Condicional Alternativo Simple (SI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#condicional-alternativo-doble-si-sino">Condicional Alternativo Doble (SI-SINO)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#condicional-alternativo-multiple-segun">Condicional Alternativo Múltiple (SEGÚN)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_control.html#estructuras-repetitivas-bucles">Estructuras Repetitivas (Bucles)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#estructura-pre-test-mientras">Estructura PRE-TEST (MIENTRAS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#estructura-post-test-repetir">Estructura POST-TEST (REPETIR)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estructuras_control.html#estructura-manejada-por-contador-para">Estructura Manejada por Contador (PARA)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="estructuras_control.html#comparacion-entre-estructuras-repetitivas">Comparación entre Estructuras Repetitivas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="subacciones.html">Subacciones (Funciones y Procedimientos)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#caracteristicas">Características</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#control-de-ejecucion">Control de Ejecución</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#elementos-de-las-subacciones">Elementos de las Subacciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#funciones">Funciones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subacciones.html#declaracion-de-funciones-pseudocodigo">Declaración de Funciones (Pseudocódigo)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#procedimientos">Procedimientos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subacciones.html#declaracion-de-procedimientos-pseudocodigo">Declaración de Procedimientos (Pseudocódigo)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#ambitos-de-variables">Ámbitos de Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subacciones.html#paso-de-parametros">Paso de Parámetros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="subacciones.html#paso-de-parametros-por-valor">Paso de Parámetros por Valor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Estructuras de Datos Complejas (Campo, Registro, Archivo)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#concepto-de-campo">Concepto de Campo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registro">Registro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#archivos">Archivos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#caracteristicas-generales-de-los-archivos">Características Generales de los Archivos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#consistencia-y-congruencia-de-archivos">Consistencia y Congruencia de Archivos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clasificacion-de-archivos-por-su-contenido">Clasificación de Archivos por su Contenido</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#organizacion-de-archivos">Organización de Archivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acceso-de-archivos">Acceso de Archivos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nocion_secuencia.html">Noción de Secuencia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#concepto">Concepto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#clasificacion">Clasificación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#segun-su-contenido">Según su contenido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#segun-su-procesamiento">Según su procesamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#uso-en-el-algoritmo">Uso en el Algoritmo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#definicion-en-el-ambiente">Definición en el ambiente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#acciones-en-el-procesamiento-operadores-de-secuencia">Acciones en el procesamiento (Operadores de Secuencia)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nocion_secuencia.html#sub-secuencias">Sub-Secuencias</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nocion_secuencia.html#relacion-entre-sub-secuencias">Relación entre Sub-Secuencias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algoritmos y Estructuras de Datos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Estructuras de Datos Complejas (Campo, Registro, Archivo)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/estructuras_datos_complejas.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="estructuras-de-datos-complejas-campo-registro-archivo">
+<h1>Estructuras de Datos Complejas (Campo, Registro, Archivo)<a class="headerlink" href="#estructuras-de-datos-complejas-campo-registro-archivo" title="Link to this heading"></a></h1>
+<section id="concepto-de-campo">
+<h2>Concepto de Campo<a class="headerlink" href="#concepto-de-campo" title="Link to this heading"></a></h2>
+<p>Un <strong>campo</strong> es un conjunto de caracteres capaz de suministrar una determinada información referida a un
+concepto. Es la entidad lógica más pequeña, un conjunto de bytes que conforman un dato.
+Características:
+*   <strong>Nombre</strong>: Identificador del campo.
+*   <strong>Tipo</strong>: Tipo de caracteres que puede contener (alfabético, entero, etc.).
+*   <strong>Tamaño</strong>: Cantidad de caracteres que puede contener.</p>
+<p>Ejemplo de definición (conceptual):
+<cite>dni : N (8)</cite> (Nombre: dni, Tipo: Numérico, Tamaño: 8)</p>
+</section>
+<section id="registro">
+<h2>Registro<a class="headerlink" href="#registro" title="Link to this heading"></a></h2>
+<p>Un <strong>registro</strong> es un conjunto de campos que permanecen juntos y se tratan como una unidad.
+Se define en el AMBIENTE para ser usado en el algoritmo.</p>
+<p>Definición de un Tipo Registro:
+.. code-block:: text</p>
+<blockquote>
+<div><dl class="simple">
+<dt>PERSONA = Registro</dt><dd><p>DNI: Entero;
+Nombre: AN(50); // Alfanumérico de 50 caracteres
+Domicilio: AN(70);</p>
+</dd>
+</dl>
+<p>Fin Registro</p>
+</div></blockquote>
+<p>Uso de un Registro:
+Primero, se declara una variable del tipo registro definido:
+.. code-block:: text</p>
+<blockquote>
+<div><p>// En el AMBIENTE del algoritmo principal o subacción
+RegAlumno: PERSONA</p>
+</div></blockquote>
+<p>Luego, se accede a sus campos usando el selector de campo (<cite>.</cite>):
+.. code-block:: text</p>
+<blockquote>
+<div><p>RegAlumno.DNI := 12345678;
+LEER(NroDNI);
+RegAlumno.DNI := NroDNI;
+ESCRIBIR(RegAlumno.Nombre);</p>
+</div></blockquote>
+</section>
+<section id="archivos">
+<h2>Archivos<a class="headerlink" href="#archivos" title="Link to this heading"></a></h2>
+<p>Un <strong>archivo</strong> es un conjunto de registros que, una vez almacenados (generalmente en memoria externa),
+se pueden utilizar a través de distintas aplicaciones.</p>
+<section id="caracteristicas-generales-de-los-archivos">
+<h3>Características Generales de los Archivos<a class="headerlink" href="#caracteristicas-generales-de-los-archivos" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Almacenados en <strong>memoria externa</strong> (permanente). Proceso en memoria interna.</p></li>
+<li><p><strong>Independencia</strong> de los datos respecto a los algoritmos que los usan.</p></li>
+<li><p>Unidad básica de entrada/salida es el <strong>registro completo</strong>.</p></li>
+<li><p>Gran capacidad de almacenamiento.</p></li>
+</ol>
+</section>
+<section id="consistencia-y-congruencia-de-archivos">
+<h3>Consistencia y Congruencia de Archivos<a class="headerlink" href="#consistencia-y-congruencia-de-archivos" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>Consistencia</strong>: Verifica la validez del dato almacenado con su definición en el ambiente (tipo, rango).
+Ej: <cite>FECHA = Registro DD: 1..31; MM: 1..12; AAAA: Entero; Fin Registro;</cite>
+<cite>RegFecha = (02/12/2019)</cite> es consistente.
+<cite>RegFecha = (50/50/9999)</cite> es inconsistente.</p></li>
+<li><p><strong>Congruencia</strong>: Verifica la validez de los datos entre sí.
+*   <strong>Fina</strong>: Validación entre datos en archivos distintos.</p>
+<blockquote>
+<div><p>Ej: DNI en archivo ALUMNOS validado con archivo PADRON.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Gruesa</strong>: Validación entre datos en un mismo registro.
+Ej: <cite>RegFecha = (31/02/2019)</cite> es consistente (cada campo individualmente), pero no congruente (febrero no tiene 31 días).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="clasificacion-de-archivos-por-su-contenido">
+<h3>Clasificación de Archivos por su Contenido<a class="headerlink" href="#clasificacion-de-archivos-por-su-contenido" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>De acuerdo a su utilidad</strong>:
+*   <strong>De Entrada</strong>: Compuestos por datos almacenados en un dispositivo de entrada.
+*   <strong>De Salida</strong>: Contienen información que se visualiza desde la computadora.
+*   <strong>Históricos (o Maestros)</strong>: Datos que varían en el tiempo, con información actualizada.
+*   <strong>De Movimiento (o Transacciones)</strong>: Se usan con archivos constantes/maestros, poseen campos en común para actualizar.
+*   <strong>Temporales (o Auxiliares)</strong>: Se crean durante la ejecución de un programa y se borran al finalizar.</p></li>
+<li><p><strong>De acuerdo a sus datos almacenados</strong>:
+*   <strong>ASCII (o de Texto)</strong>: Datos almacenados como texto simple. Permite intercambio y modificación manual.
+*   <strong>Binarios</strong>: Almacena información en un lenguaje que solo la computadora comprende (colores, sonidos, imágenes, órdenes). Menor peso que los ASCII.</p></li>
+</ol>
+</section>
+</section>
+<section id="organizacion-de-archivos">
+<h2>Organización de Archivos<a class="headerlink" href="#organizacion-de-archivos" title="Link to this heading"></a></h2>
+<p>Manera en que se encuentran almacenados los registros en el archivo. Depende de los <strong>soportes</strong>:
+*   <strong>Soportes Secuenciales</strong>: Registros escritos uno a continuación del otro. Para acceder al registro N, se deben recorrer N-1 anteriores.
+*   <strong>Soportes Direccionables</strong>: Información localizada por su dirección. Registros deben tener una <strong>clave</strong> única.</p>
+<p>Tipos de Organización:
+1.  <strong>Secuencial</strong>: Sucesión de registros almacenados consecutivamente (continuidad física). Para acceder a un registro <cite>n</cite>, se deben pasar por los <cite>n-1</cite> anteriores.</p>
+<blockquote>
+<div><p>Común en soportes secuenciales (cintas) y direccionables (discos).</p>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p><strong>Relativa (o Directa)</strong>: El orden físico no necesariamente corresponde al lógico. Se accede por su posición (lugar relativo). Necesita soporte direccionable, campo clave y relación clave-dirección.
+Permite huecos o espacios libres intermedios.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>// Dir. memoria | Clave | Datos
+// 1            |       |
+// 2            | 2     | Registro &#39;A&#39;
+// 3            |       |
+// 4            | 4     | Registro &#39;B&#39;
+// 5            | 5     | Registro &#39;C&#39;
+</pre></div>
+</div>
+</li>
+<li><p><strong>Indexada (o Secuencial Indexada)</strong>: Consta de un archivo de datos y un archivo índice.
+*   <strong>Área de datos (o primaria)</strong>: Registros en forma secuencial por clave, sin huecos.
+*   <strong>Área de índices</strong>: Tabla con niveles de índice que apuntan a bloques/registros en el área de datos.</p>
+<blockquote>
+<div><p>Ejemplo conceptual:
+Área de Índices:
+Clave | Dirección (en archivo de datos)
+15    | 010
+24    | 020
+36    | 030
+…</p>
+<p>Área de Datos (en dirección 010):
+010 | 15 | Datos del registro 15
+011 | .. | Siguiente registro secuencial
+…</p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="acceso-de-archivos">
+<h2>Acceso de Archivos<a class="headerlink" href="#acceso-de-archivos" title="Link to this heading"></a></h2>
+<p>Manera en que se recuperan (leen) los registros.
+1.  <strong>Acceso Secuencial</strong>: Acceso según el orden de almacenamiento, uno tras otro.
+2.  <strong>Acceso Directo</strong>: Acceso a un registro determinado sin consultar precedentes. Solo con soportes direccionables.
+3.  <strong>Acceso Mixto</strong>: Acceso directo a un registro y posterior acceso secuencial a los siguientes.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="subacciones.html" class="btn btn-neutral float-left" title="Subacciones (Funciones y Procedimientos)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="nocion_secuencia.html" class="btn btn-neutral float-right" title="Noción de Secuencia" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Docentes de la Cátedra AED - UTN FRRe.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
