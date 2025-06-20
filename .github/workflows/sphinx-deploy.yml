@@ -26,7 +26,7 @@ jobs:
 
       - name: Build Sphinx docs 🛠️
         run: |
-          sphinx-build -b html docs/source docs/_build/html
+          sphinx-build -b html docs/source docs/build/html
           # El -b html es importante, source es donde están tus .rst y conf.py
           # docs/_build/html es donde se generará el HTML
 
