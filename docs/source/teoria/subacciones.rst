@@ -6,10 +6,10 @@ cuya resolución se realiza mediante subalgoritmos o subacciones.
 
 Características
 ---------------
-* Son acciones que forman parte de una ACCIÓN PRINCIPAL.
-* Módulos escritos para ejecutar alguna tarea específica.
-* Se definen en el AMBIENTE y se invocan en el PROCESO.
-* Se escriben una vez, pero pueden ser referenciados múltiples veces.
+*   Son acciones que forman parte de una ACCIÓN PRINCIPAL.
+*   Módulos escritos para ejecutar alguna tarea específica.
+*   Se definen en el AMBIENTE y se invocan en el PROCESO.
+*   Se escriben una vez, pero pueden ser referenciados múltiples veces.
 
 Control de Ejecución
 --------------------
@@ -20,6 +20,7 @@ Elementos de las Subacciones
 ----------------------------
 *   **Nombre**: Único y representativo. No debe ser palabra reservada.
 *   **Parámetros**: Variables y/o constantes para pasar datos entre el algoritmo principal y la subacción.
+
     *   **Parámetros formales (o ficticios)**: Los que aparecen en la definición de la subacción. *Solo pueden ser variables*.
     *   **Parámetros actuales (o argumentos)**: Los que se usan en la llamada a la subacción. *Pueden ser constantes, variables, expresiones*.
 
@@ -32,6 +33,7 @@ Una FUNCIÓN es un subalgoritmo que recibe argumentos (parámetros actuales) y *
 
 Declaración de Funciones (Pseudocódigo)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. code-block:: text
 
     Funcion <nombrefun>(<lista_de_parámetros_formales>): <Tipo_de_retorno>
@@ -47,6 +49,7 @@ Declaración de Funciones (Pseudocódigo)
 *   `<Tipo_de_retorno>`: Tipo del resultado que devuelve la función.
 
 Ejemplo de Función:
+
 .. code-block:: text
 
     FUNCION ES_PRIMO(A:entero):lógico
@@ -71,6 +74,7 @@ de las funciones, **no devuelve ningún valor directamente**, solo ejecuta accio
 
 Declaración de Procedimientos (Pseudocódigo)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. code-block:: text
 
     Procedimiento <nombreproc>(<lista_de_parámetros_formales>)
@@ -81,6 +85,7 @@ Declaración de Procedimientos (Pseudocódigo)
     Fin Procedimiento
 
 Ejemplo de Procedimiento:
+
 .. code-block:: text
 
     PROCEDIMIENTO Login(usu, pass, valid: alfanumerico) // Asumiendo que valid es la contraseña correcta
@@ -110,9 +115,11 @@ La subacción trabaja con esta copia. Cualquier modificación al parámetro dent
 **no afecta** a la variable original en el algoritmo llamador.
 Es el método predominante en los ejemplos de la cátedra.
 
-.. image:: _static/paso_por_valor.png
+.. figure:: _static/paso_por_valor.png
    :alt: Esquema de paso de parámetros por valor
    :align: center
    :width: 400px
 
-*(Nota: Deberás crear o encontrar una imagen llamada `paso_por_valor.png` y colocarla en `docs/source/_static/` para que la directiva `.. image::` funcione. La imagen del PDF es un buen candidato).*
+   Esquema conceptual del paso de parámetros por valor.
+
+*(Asegúrate de que `paso_por_valor.png` esté en `docs/source/_static/`. He cambiado `.. image::` por `.. figure::` para poder añadirle una leyenda, lo cual es buena práctica y Furo lo maneja bien).*

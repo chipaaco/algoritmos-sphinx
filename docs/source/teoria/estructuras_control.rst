@@ -185,19 +185,35 @@ Es un ciclo definido, se conoce de antemano la cantidad de veces que se iterará
 Comparación entre Estructuras Repetitivas
 -----------------------------------------
 
-+------------------------------------------+-------------------------------------+-------------------------------------+-----------------------------+
-| Característica                           | PRE-TEST (MIENTRAS)                 | POST-TEST (REPETIR)                 | MANEJADO X CONT (PARA)      |
-+==========================================+=====================================+=====================================+=============================+
-| ¿Se conoce N° iteraciones?               | NO                                  | NO                                  | SI                          |
-+------------------------------------------+-------------------------------------+-------------------------------------+-----------------------------+
-| Momento verificación condición           | Antes de ejecutar cuerpo            | Después de ejecutar cuerpo          | Antes de ejecutar cuerpo    |
-+------------------------------------------+-------------------------------------+-------------------------------------+-----------------------------+
-| ¿Puede no ejecutarse nunca?              | SI (si condición es falsa al inicio)| NO (al menos una vez)               | SI (si Vi > Vf y paso > 0)  |
-+------------------------------------------+-------------------------------------+-------------------------------------+-----------------------------+
-| ¿Modificar valor condición en bucle?     | SI (necesario para finalizar)       | SI (necesario para finalizar)       | NO (es automático)          |
-+------------------------------------------+-------------------------------------+-------------------------------------+-----------------------------+
-| ¿Puede ser infinito?                     | SI                                  | SI                                  | NO (generalmente)           |
-+------------------------------------------+-------------------------------------+-------------------------------------+-----------------------------+
-| Cuándo usar                              | N° iteraciones indeterminado,       | N° iteraciones indeterminado,       | N° iteraciones conocido     |
-|                                          | puede no ejecutarse                 | debe ejecutarse al menos una vez    | por adelantado              |
-+------------------------------------------+-------------------------------------+-------------------------------------+-----------------------------+
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+   * - Característica
+     - PRE-TEST (MIENTRAS)
+     - POST-TEST (REPETIR)
+     - MANEJADO X CONT (PARA)
+   * - ¿Se conoce N° iteraciones?
+     - NO
+     - NO
+     - SI
+   * - Momento verificación condición
+     - Antes de ejecutar cuerpo
+     - Después de ejecutar cuerpo
+     - Antes de ejecutar cuerpo
+   * - ¿Puede no ejecutarse nunca?
+     - SI (si condición es falsa al inicio)
+     - NO (al menos una vez)
+     - SI (si Vi > Vf y paso > 0)
+   * - ¿Modificar valor condición en bucle?
+     - SI (necesario para finalizar)
+     - SI (necesario para finalizar)
+     - NO (es automático)
+   * - ¿Puede ser infinito?
+     - SI
+     - SI
+     - NO (generalmente)
+   * - Cuándo usar
+     - N° iteraciones indeterminado, puede no ejecutarse
+     - N° iteraciones indeterminado, debe ejecutarse al menos una vez
+     - N° iteraciones conocido por adelantado
