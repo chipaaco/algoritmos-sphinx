@@ -1,0 +1,576 @@
+<!doctype html>
+<html class="no-js" lang="es" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Índice" href="../genindex.html" /><link rel="search" title="Búsqueda" href="../search.html" /><link rel="next" title="3. Subacciones (Funciones y Procedimientos)" href="subacciones.html" /><link rel="prev" title="1. Introducción a la Algoritmia" href="introduccion_algoritmia.html" />
+
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>2. Estructuras de Control - AED.pse</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">AED.pse</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">AED.pse</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Búsqueda" name="q" aria-label="Búsqueda">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../links.html">Links de Interés</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Apuntes de Teoría:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduccion_algoritmia.html">1. Introducción a la Algoritmia</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">2. Estructuras de Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subacciones.html">3. Subacciones (Funciones y Procedimientos)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nocion_secuencia.html">4. Noción de Secuencia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estructuras_datos_complejas.html">5. Estructuras de Datos Complejas (Campo, Registro, Archivo)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Apuntes de Práctica:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../practica/sintaxis_elemental.html">1. Cheatsheet de Sintaxis de Pseudocódigo</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="estructuras-de-control">
+<h1><span class="section-number">2. </span>Estructuras de Control<a class="headerlink" href="#estructuras-de-control" title="Link to this heading">¶</a></h1>
+<p>Las estructuras de control señalan el orden en que tienen que sucederse los pasos de un algoritmo.
+Todo algoritmo estructurado puede ser escrito utilizando solamente tres tipos de estructura de control.</p>
+<section id="estructura-secuencial">
+<h2><span class="section-number">2.1. </span>Estructura Secuencial<a class="headerlink" href="#estructura-secuencial" title="Link to this heading">¶</a></h2>
+<p>Una acción (instrucción) sigue a otra en secuencia. La salida de una es la entrada de la siguiente.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ACCION Ejemplo1 ES
+AMBIENTE
+    a, doble: entero
+PROCESO
+    ESCRIBIR(&quot;Ingrese el número&quot;)
+    LEER(a)
+    doble := a * 2
+    ESCRIBIR(&quot;Resultado -&gt;&quot;, doble)
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="estructura-condicional">
+<h2><span class="section-number">2.2. </span>Estructura Condicional<a class="headerlink" href="#estructura-condicional" title="Link to this heading">¶</a></h2>
+<p>Se utilizan para tomar decisiones lógicas.</p>
+<section id="condicional-alternativo-simple-si">
+<h3><span class="section-number">2.2.1. </span>Condicional Alternativo Simple (SI)<a class="headerlink" href="#condicional-alternativo-simple-si" title="Link to this heading">¶</a></h3>
+<p>Si se verifica una condición, se ejecuta una serie de instrucciones.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SI &lt;condición&gt; ENTONCES
+    &lt;acciones_si_verdadero&gt;
+FIN_SI
+
+// Ejemplo
+ACCION Ejemplo2 ES
+AMBIENTE
+    a: entero
+PROCESO
+    ESC(&quot;Ingrese el número&quot;)
+    LEER(a)
+    SI a &gt; 0 ENTONCES
+        ESCRIBIR(&quot;El nro. es positivo&quot;)
+    FIN_SI
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="condicional-alternativo-doble-si-sino">
+<h3><span class="section-number">2.2.2. </span>Condicional Alternativo Doble (SI-SINO)<a class="headerlink" href="#condicional-alternativo-doble-si-sino" title="Link to this heading">¶</a></h3>
+<p>Si se verifica una condición, se ejecuta un bloque; si no, se ejecuta otro.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SI &lt;condición&gt; ENTONCES
+    &lt;acciones_si_verdadero&gt;
+SINO
+    &lt;acciones_si_falso&gt;
+FIN_SI
+
+// Ejemplo
+ACCION Ejemplo3 ES
+AMBIENTE
+    A, B: ENTERO
+PROCESO
+    ESC(&quot;Ingrese el primer número&quot;), LEER(A)
+    ESC(&quot;Ingrese el segundo número&quot;), LEER(B)
+    SI A &gt; B ENTONCES
+        ESC(A, &quot;es mayor que &quot;, B)
+    SINO
+        ESC(A, &quot;NO es mayor que &quot;, B)
+    FIN_SI
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="condicional-alternativo-multiple-segun">
+<h3><span class="section-number">2.2.3. </span>Condicional Alternativo Múltiple (SEGÚN)<a class="headerlink" href="#condicional-alternativo-multiple-segun" title="Link to this heading">¶</a></h3>
+<p>Permite evaluar una variable que puede tomar múltiples valores y ejecutar diferentes acciones para cada uno.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SEGÚN &lt;variable_o_expresion&gt; HACER
+    &lt;valor1&gt;: &lt;acciones_para_valor1&gt;
+    &lt;valor2&gt;: &lt;acciones_para_valor2&gt;
+    ...
+    &lt;otro_caso&gt;: &lt;acciones_por_defecto&gt; // Opcional
+FIN_SEGUN
+
+// Ejemplo
+ACCION EJEMPLO4 ES
+AMBIENTE
+    a, b, suma: entero
+PROCESO
+    ESC(&quot;Ingrese el primer número&quot;), LEER(a)
+    ESC (&quot;Ingrese el segundo número&quot;),LEER(b)
+    suma := a + b
+    SEGÚN suma HACER
+        =0 : ESC(&quot;El resultado es igual a 0&quot;)
+        &lt;0: ESC(&quot;El resultado es menor a 0&quot;)
+        &gt;0: ESC(&quot;El resultado es mayor a 0&quot;)
+    FIN_SEGUN
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+</section>
+<section id="estructuras-repetitivas-bucles">
+<h2><span class="section-number">2.3. </span>Estructuras Repetitivas (Bucles)<a class="headerlink" href="#estructuras-repetitivas-bucles" title="Link to this heading">¶</a></h2>
+<p>Repiten una secuencia de instrucciones un número determinado o indeterminado de veces.
+Cada repetición se llama <strong>iteración</strong>.</p>
+<section id="estructura-pre-test-mientras">
+<h3><span class="section-number">2.3.1. </span>Estructura PRE-TEST (MIENTRAS)<a class="headerlink" href="#estructura-pre-test-mientras" title="Link to this heading">¶</a></h3>
+<p>El cuerpo del bucle se repite <strong>mientras</strong> una condición sea verdadera.
+La condición se evalúa <strong>antes</strong> de cada iteración. Puede ejecutarse 0 o más veces.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>MIENTRAS &lt;condición&gt; HACER
+    &lt;acciones_del_bucle&gt;
+FIN_MIENTRAS
+
+// Ejemplo: Suma de números entre 1 y N
+ACCION BUCLE1_MIENTRAS ES
+AMBIENTE
+    n, suma, cont: entero
+PROCESO
+    ESCRIBIR(&quot;Ingrese el numero&quot;), LEER(n)
+    suma := 0
+    cont := 1
+    MIENTRAS cont &lt;= n HACER
+        suma := suma + cont
+        cont := cont + 1
+    FIN_MIENTRAS
+    ESCRIBIR(&quot;La suma es: &quot;, suma)
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="estructura-post-test-repetir">
+<h3><span class="section-number">2.3.2. </span>Estructura POST-TEST (REPETIR)<a class="headerlink" href="#estructura-post-test-repetir" title="Link to this heading">¶</a></h3>
+<p>El cuerpo del bucle se ejecuta <strong>al menos una vez</strong>, y se repite <strong>hasta que</strong> una condición sea verdadera.
+La condición se evalúa <strong>después</strong> de cada iteración.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>REPETIR
+    &lt;acciones_del_bucle&gt;
+HASTA QUE &lt;condición&gt;
+
+// Ejemplo: Suma de números entre 1 y N
+ACCION BUCLE1_REPETIR ES
+AMBIENTE
+    n, suma, cont: entero
+PROCESO
+    ESCRIBIR(&quot;Ingrese el numero&quot;), LEER(n)
+    suma := 0
+    cont := 0 // o 1, ajustar lógica interna
+    REPETIR
+        cont := cont + 1 // Si cont inicia en 0
+        suma := suma + cont
+        // Si cont iniciara en 1, el orden podría ser suma, luego cont++
+    HASTA QUE cont &gt;= n // o suma &gt;= n en el ejemplo original (que parece un error de lógica para sumar 1 a N)
+                        // Para sumar de 1 a N, la condición de parada es sobre &#39;cont&#39;
+    ESCRIBIR(&quot;La suma es: &quot;, suma)
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+<section id="estructura-manejada-por-contador-para">
+<h3><span class="section-number">2.3.3. </span>Estructura Manejada por Contador (PARA)<a class="headerlink" href="#estructura-manejada-por-contador-para" title="Link to this heading">¶</a></h3>
+<p>Es un ciclo definido, se conoce de antemano la cantidad de veces que se iterará.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>PARA &lt;variable_contador&gt; := &lt;valor_inicial&gt; HASTA &lt;valor_final&gt; [INCREMENTO &lt;paso&gt;] HACER
+    &lt;acciones_del_bucle&gt;
+FIN_PARA
+
+// Ejemplo: Suma de números entre 1 y N
+ACCION BUCLE3_PARA ES
+AMBIENTE
+    n, suma, cont: entero
+PROCESO
+    ESCRIBIR(&quot;Ingrese el numero&quot;), LEER(n)
+    suma := 0
+    PARA cont := 1 HASTA n HACER  // Incremento por defecto es 1
+        suma := suma + cont
+    FIN_PARA
+    ESCRIBIR(&quot;La suma es: &quot;, suma)
+FIN_ACCION
+</pre></div>
+</div>
+</section>
+</section>
+<section id="comparacion-entre-estructuras-repetitivas">
+<h2><span class="section-number">2.4. </span>Comparación entre Estructuras Repetitivas<a class="headerlink" href="#comparacion-entre-estructuras-repetitivas" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Característica</p></th>
+<th class="head"><p>PRE-TEST (MIENTRAS)</p></th>
+<th class="head"><p>POST-TEST (REPETIR)</p></th>
+<th class="head"><p>MANEJADO X CONT (PARA)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>¿Se conoce N° iteraciones?</p></td>
+<td><p>NO</p></td>
+<td><p>NO</p></td>
+<td><p>SI</p></td>
+</tr>
+<tr class="row-odd"><td><p>Momento verificación condición</p></td>
+<td><p>Antes de ejecutar cuerpo</p></td>
+<td><p>Después de ejecutar cuerpo</p></td>
+<td><p>Antes de ejecutar cuerpo</p></td>
+</tr>
+<tr class="row-even"><td><p>¿Puede no ejecutarse nunca?</p></td>
+<td><p>SI (si condición es falsa al inicio)</p></td>
+<td><p>NO (al menos una vez)</p></td>
+<td><p>SI (si Vi &gt; Vf y paso &gt; 0)</p></td>
+</tr>
+<tr class="row-odd"><td><p>¿Modificar valor condición en bucle?</p></td>
+<td><p>SI (necesario para finalizar)</p></td>
+<td><p>SI (necesario para finalizar)</p></td>
+<td><p>NO (es automático)</p></td>
+</tr>
+<tr class="row-even"><td><p>¿Puede ser infinito?</p></td>
+<td><p>SI</p></td>
+<td><p>SI</p></td>
+<td><p>NO (generalmente)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuándo usar</p></td>
+<td><p>N° iteraciones indeterminado, puede no ejecutarse</p></td>
+<td><p>N° iteraciones indeterminado, debe ejecutarse al menos una vez</p></td>
+<td><p>N° iteraciones conocido por adelantado</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="subacciones.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="section-number">3. </span>Subacciones (Funciones y Procedimientos)</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="introduccion_algoritmia.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><span class="section-number">1. </span>Introducción a la Algoritmia</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, Daniel C. M. Tossutti
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/chipaaco/algoritmos-sphinx" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">2. Estructuras de Control</a><ul>
+<li><a class="reference internal" href="#estructura-secuencial">2.1. Estructura Secuencial</a></li>
+<li><a class="reference internal" href="#estructura-condicional">2.2. Estructura Condicional</a><ul>
+<li><a class="reference internal" href="#condicional-alternativo-simple-si">2.2.1. Condicional Alternativo Simple (SI)</a></li>
+<li><a class="reference internal" href="#condicional-alternativo-doble-si-sino">2.2.2. Condicional Alternativo Doble (SI-SINO)</a></li>
+<li><a class="reference internal" href="#condicional-alternativo-multiple-segun">2.2.3. Condicional Alternativo Múltiple (SEGÚN)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#estructuras-repetitivas-bucles">2.3. Estructuras Repetitivas (Bucles)</a><ul>
+<li><a class="reference internal" href="#estructura-pre-test-mientras">2.3.1. Estructura PRE-TEST (MIENTRAS)</a></li>
+<li><a class="reference internal" href="#estructura-post-test-repetir">2.3.2. Estructura POST-TEST (REPETIR)</a></li>
+<li><a class="reference internal" href="#estructura-manejada-por-contador-para">2.3.3. Estructura Manejada por Contador (PARA)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comparacion-entre-estructuras-repetitivas">2.4. Comparación entre Estructuras Repetitivas</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=e2bb6099"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/translations.js?v=f85f4cfb"></script>
+    </body>
+</html>
